@@ -60,10 +60,10 @@ class Bruch{
 
         return new Bruch(x,y);
     }
-    Bruch div(Bruch b){
+    //Bruch div(Bruch b){
 
-        return mul(b.inv());
-    }
+       // return mul(b.inv());
+   // }
 
 
     public String toString(){
