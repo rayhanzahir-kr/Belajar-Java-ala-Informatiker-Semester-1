@@ -1,6 +1,6 @@
 Learning Java the Informatiker Way – Semester 1 ☕💻
 
-This repository documents my journey learning Java during my first semester at THM (Informatik / BWL-Inf / related fields).
+This repository documents my journey learning Java during my first semester at THM .
 The focus isn't just on coding, but also on understanding concepts commonly covered in university: data types, control flow, OOP, and basic algorithms.
 
 Primary language: English, occasionally mixed with German terms to align with course materials.
