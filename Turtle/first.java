@@ -13,11 +13,9 @@ public class first {
     }
 
     static void mandalaPolygonFlower(Turtle t){
-        for(int i=0;i<50;i++ ){
+        for(int i=0;i<36;i++ ){
             t.color("hsl("+(i*10)+",100%,50%");
-            t.polygon(6, 20
-
-            );
+            t.polygon(6, 20);
             t.left(10);
         }
     }

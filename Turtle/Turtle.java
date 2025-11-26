@@ -1,5 +1,14 @@
 
 import java.util.Locale;
+class ViewBox {
+   final double x, y, width, height;
+   ViewBox(double x, double y, double width, double height) {
+       this.x = x;
+       this.y = y;
+       this.width = width;
+       this.height = height;
+   }
+}
 
 
 public class Turtle {
