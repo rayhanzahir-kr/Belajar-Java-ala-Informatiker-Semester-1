@@ -2,34 +2,46 @@
 
 ## 1. Änderungen an `Turtle.java`
 
-Ich habe die von der Veranstaltung bereitgestellte `Turtle.java` um folgende Funktionen erweitert:
+Ich habe die von der Veranstaltung bereitgestellte `Turtle.java` um zwei zusätzliche Funktionen erweitert:
 
-1. **Farbunterstützung für Linien**
-   - Neues Feld `strokeColor` in der Klasse `Turtle`.
-   - Neue Methode  
-     ```java
-     Turtle color(String cssColor)
-     ```  
-     mit der die Linienfarbe über einen CSS-/SVG-Farbnamen (z.B. `"red"`) oder einen Hex-Code (z.B. `"#ff0000"`) gesetzt werden kann.
-   - Die SVG-Ausgabe (`<path ...>`) wurde so angepasst, dass sie jetzt die Attribute  
-     `stroke="<Farbe>"` und `stroke-width="<Breite>"` verwendet.
+### 1. **Farbunterstützung für Linien**
+- Neues Feld `strokeColor` in der Klasse `Turtle`.
+- Neue Methode:
+  ```java
+  Turtle color(String cssColor)
+  ```
+  Mit dieser Methode kann die Linienfarbe über einen CSS-/SVG-Farbnamen (z.B. "red") oder einen Hex-Code (z.B. "#ff0000") gesetzt werden.
+- Die SVG-Ausgabe für Linien wurde so angepasst, dass sie jetzt die Attribute  
+  `stroke="<Farbe>"` und `stroke-width="<Breite>"` verwendet.
 
-2. **Methode `polygon(int n, double size)`**
-   - Zeichnet ein regelmäßiges n-Eck mit `n` Seiten und einer Seitenlänge von `size`.
-   - Implementiert über eine Schleife mit `forward(size)` und `left(360.0 / n)`.
-
+### 2. **Methode `polygon(int n, double size)`**
+- Zeichnet ein regelmäßiges n-Eck mit `n` Seiten und einer Seitenlänge von `size`.
+- Die Implementierung erfolgt über eine Schleife:
+  - `forward(size)` zeichnet eine Seite
+  - `left(360.0 / n)` dreht die Turtle um den passenden Außenwinkel
 
 ## 2. Nutzung der neuen Features in `first.java`
 
-In `first.java` verwende ich die neuen Methoden wie folgt:
+In `first.java` nutze ich die erweiterten Funktionen, um eine **Mandala Polygon Flower** zu zeichnen:
 
-- Mit `color(...)` setze ich die Linienfarbe (z.B. orange, blau, grün), um die Grafik visuell ansprechender zu machen.
-- Mit `polygon(int n, double size)` erzeuge ich eine Art „Blume“ aus regelmäßigen Vielecken (z.B. Hexagone), indem ich das Polygon mehrfach zeichne und die Turtle jedes Mal drehe.
+### Verwendete Methoden:
+- `color(...)` für Farbverlauf
+- `polygon(...)` für regelmäßige Polygone
+- `left(...)` zur Drehung
+
+Beispiel:
+
+```java
+for (int i = 0; i < 36; i++) {
+    t.color("hsl(" + (i * 10) + ", 80%, 50%)");
+    t.polygon(6, 20);
+    t.left(10);
+}
+```
 
 ## 3. Abgegebene Dateien
 
-- `Turtle.java` – erweiterte Turtle-Klasse mit Farbunterstützung `color(String color)`, `polygon(...)` 
-- `first.java` – Hauptprogramm, das die Turtle-Grafik erzeugt und die neuen Features nutzt.
-- `output.svg` – Resultierende Turtle-Grafik im SVG-Format.
-- `README.md` – Diese Dokumentation der Änderungen und der verwendeten Features.
-
+- `Turtle.java`
+- `first.java`
+- `output.svg`
+- `README.md`
