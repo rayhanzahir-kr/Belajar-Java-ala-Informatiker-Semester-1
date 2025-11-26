@@ -1,6 +1,6 @@
-package VW7;
 
-public class Test {
+
+public class first {
    static Turtle square(Turtle t, double width) {
         t.forward(width).left(90);
         t.forward(width);

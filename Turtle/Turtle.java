@@ -1,8 +1,8 @@
-package VW7;
 
 import java.util.Locale;
 
-class Turtle {
+
+public class Turtle {
    ViewBox viewBox;
    double x;
    double y;
